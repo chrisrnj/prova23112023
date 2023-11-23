@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body id="body">
+    <h1>Calculadora de IMC</h1>
+    <p>Bem-vindo(a)! Clique no botão para calcular seu IMC.</p>
+    <button onclick="calcular()">Calcular</button>
+
+    <div id="resultado">
+        <h1>Resultado</h1>
+        <p id="quantidade">Usuários coletados: 0</p>
+        <p id="media">Média IMCs: 0</p>
+        <p id="maior">Maior IMC registrado: 0</p>
+        <table id="tabela">
+            <tr>
+                <th>Nome</th>
+                <th>IMC</th>
+                <th>Classificação</th>
+            </tr>
+            <tr id="nulo">
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        </table>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
