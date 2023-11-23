@@ -10,6 +10,12 @@ function calcular() {
         var altura = parseFloat(prompt('Digite a altura de ' + nome + ' em metros'))
         var peso = parseFloat(prompt('Digite o peso de ' + nome + ' em kilos'))
         var imc = (peso / altura ** 2);
+        var classificacao = getClassificacao(imc)
+
+        alert(`Dados de ${nome}
+  IMC: ${imc.toFixed(2)}
+  Classificação: ${classificacao}
+Pressione OK para continuar`)
 
         var tabela = document.getElementById('tabela')
 
@@ -17,14 +23,20 @@ function calcular() {
 
         var novoElemento = document.createElement('tr')
         var novoNome = document.createElement('td')
+        var novaAltura = document.createElement('td')
+        var novoPeso = document.createElement('td')
         var novoIMC = document.createElement('td')
         var novaClassificacao = document.createElement('td')
 
         novoNome.innerHTML = nome
+        novaAltura.innerHTML = altura
+        novoPeso.innerHTML = peso
         novoIMC.innerHTML = imc.toFixed(2)
-        novaClassificacao.innerHTML = getClassificacao(imc)
+        novaClassificacao.innerHTML = classificacao
 
         novoElemento.appendChild(novoNome)
+        novoElemento.appendChild(novaAltura)
+        novoElemento.appendChild(novoPeso)
         novoElemento.appendChild(novoIMC)
         novoElemento.appendChild(novaClassificacao)
         tabela.appendChild(novoElemento)
